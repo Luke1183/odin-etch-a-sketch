@@ -19,6 +19,15 @@ body {
 #grid-container {
     display: flex;
     background-color: aquamarine;
-    min-width: 960px;
-    min-height: 960px;
+    min-width: 964px;
+    max-width: 964px;
+    min-height: 964px;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+}
+
+.cell {
+    min-width: 60px;
+    /* min-height: 60px; */
 }

@@ -6,10 +6,11 @@ function removeGrid() {
 }
 
 function createGrid(n) {
-  for (let i = 1; i <= n; i++) {
-    let cell = "cell" + i;
+  let cellDim = 960 / n;
+  for (let i = 1; i <= n * n; i++) {
+    let cell = "";
     cell = document.createElement("div");
-    cell.textContent = `${i}`;
+    cell.classList.add("cell");
     gridContainer.appendChild(cell);
   }
 }
