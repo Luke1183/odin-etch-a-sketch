@@ -10,7 +10,10 @@ function createGrid(n) {
   for (let i = 1; i <= n * n; i++) {
     let cell = "";
     cell = document.createElement("div");
-    cell.classList.add("cell");
+    cell.style.minWidth = `${cellDim}px`;
+    cell.addEventListener("mouseenter", () => {
+      cell.style.backgroundColor = "blue";
+    });
     gridContainer.appendChild(cell);
   }
 }
