@@ -16,6 +16,13 @@ body {
     align-items: center;
 }
 
+#grid-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
 #grid-container {
     display: flex;
     background-color: black;
