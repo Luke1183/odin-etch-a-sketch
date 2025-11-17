@@ -41,10 +41,12 @@ gridSizeButton.addEventListener("click", () => {
     } else {
       removeGrid();
       errorMessage = "Number not within range";
+      gridContainer.style.backgroundColor = "white";
     }
   } else {
     removeGrid();
     errorMessage = "Must enter a number";
+    gridContainer.style.backgroundColor = "white";
   }
   if (errorMessage === "") {
     removeGrid();
