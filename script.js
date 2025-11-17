@@ -12,7 +12,18 @@ function createGrid(n) {
     cell = document.createElement("div");
     cell.style.minWidth = `${cellDim}px`;
     cell.addEventListener("mouseenter", () => {
-      cell.style.backgroundColor = "blue";
+      let randomNumber = 5 * Math.random();
+      if (randomNumber < 1) {
+        cell.style.backgroundColor = "blue";
+      } else if (randomNumber >= 1 && randomNumber < 2) {
+        cell.style.backgroundColor = "green";
+      } else if (randomNumber >= 2 && randomNumber < 3) {
+        cell.style.backgroundColor = "red";
+      } else if (randomNumber >= 3 && randomNumber < 4) {
+        cell.style.backgroundColor = "orange";
+      } else {
+        cell.style.backgroundColor = "yellow";
+      }
     });
     gridContainer.appendChild(cell);
   }
