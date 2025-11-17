@@ -8,8 +8,7 @@ function removeGrid() {
 function createGrid(n) {
   let cellDim = 960 / n;
   for (let i = 1; i <= n * n; i++) {
-    let cell = "";
-    cell = document.createElement("div");
+    let cell = document.createElement("div");
     cell.style.minWidth = `${cellDim}px`;
     cell.style.backgroundColor = "white";
     cell.addEventListener("mouseenter", () => {
