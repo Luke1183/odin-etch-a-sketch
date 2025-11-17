@@ -8,11 +8,16 @@ function removeGrid() {
 function createGrid(n) {
   let cellDim = 960 / n;
   for (let i = 1; i <= n * n; i++) {
+    let cellOpacity = 1;
     let cell = document.createElement("div");
     cell.style.minWidth = `${cellDim}px`;
     cell.style.backgroundColor = "white";
     cell.addEventListener("mouseenter", () => {
       let randomNumber = 5 * Math.random();
+      if (cellOpacity > 0) {
+        cellOpacity -= 0.1;
+        cell.style.opacity = `${cellOpacity}`;
+      }
       if (randomNumber < 1) {
         cell.style.backgroundColor = "blue";
       } else if (randomNumber >= 1 && randomNumber < 2) {
