@@ -34,6 +34,13 @@ function createGrid(n) {
   }
 }
 
+const gridRefreshButton = document.querySelector("#grid-refresh");
+gridRefreshButton.addEventListener("click", () => {
+  removeGrid();
+  createGrid(n);
+  gridContainer.style.backgroundColor = "black";
+});
+
 const gridSizeButton = document.querySelector("#grid-size");
 gridSizeButton.addEventListener("click", () => {
   let userInput = Number(prompt("Enter a number between 16 and 100:"));
@@ -43,6 +50,7 @@ gridSizeButton.addEventListener("click", () => {
     if (userInput > 15 && userInput < 101) {
       n = userInput;
       createGrid(n);
+      gridContainer.style.backgroundColor = "black";
     } else {
       removeGrid();
       errorMessage = "Number not within range";
