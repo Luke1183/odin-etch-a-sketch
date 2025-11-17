@@ -11,6 +11,7 @@ function createGrid(n) {
     let cell = "";
     cell = document.createElement("div");
     cell.style.minWidth = `${cellDim}px`;
+    cell.style.backgroundColor = "white";
     cell.addEventListener("mouseenter", () => {
       let randomNumber = 5 * Math.random();
       if (randomNumber < 1) {
