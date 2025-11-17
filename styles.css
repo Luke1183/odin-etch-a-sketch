@@ -18,7 +18,7 @@ body {
 
 #grid-container {
     display: flex;
-    background-color: aquamarine;
+    background-color: black;
     min-width: 964px;
     max-width: 964px;
     min-height: 964px;
